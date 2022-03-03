@@ -1,7 +1,8 @@
 # GDN
-
+Adaptation of
 Code implementation for : [Graph Neural Network-Based Anomaly Detection in Multivariate Time Series(AAAI'21)](https://arxiv.org/pdf/2106.06947.pdf)
 
+To execute a previously trained model with IoT data and obtain a file with attack detections.
 
 # Installation
 ### Requirements
@@ -16,7 +17,7 @@ Code implementation for : [Graph Neural Network-Based Anomaly Detection in Multi
     bash install.sh
 ```
 
-### Quick Start
+### Quick Start   TODO
 Run to check if the environment is ready
 ```
     bash run.sh cpu msl
@@ -28,7 +29,7 @@ Run to check if the environment is ready
 # Usage
 We use part of msl dataset(refer to [telemanom](https://github.com/khundman/telemanom)) as demo example. 
 
-## Data Preparation
+## Data Preparation   TODO
 ```
 # put your dataset under data/ directory with the same structure shown in the data/msl/
 
@@ -50,7 +51,7 @@ data
 * The column sequence in .csv don't need to match the sequence in list.txt, we will rearrange the data columns according to the sequence in list.txt.
 * test.csv should have a column named "attack" which contains ground truth label(0/1) of being attacked or not(0: normal, 1: attacked)
 
-## Run
+## Run  TODO
 ```
     # using gpu
     bash run.sh <gpu_id> <dataset>
@@ -60,8 +61,7 @@ data
 ```
 You can change running parameters in the run.sh.
 
-# Others
-SWaT and WADI datasets can be requested from [iTrust](https://itrust.sutd.edu.sg/)
+
 
 
 # Citation
