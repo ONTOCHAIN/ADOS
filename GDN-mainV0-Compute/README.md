@@ -4,6 +4,9 @@ iExec decentralized oracle for anamaly detection in IoT data from devices and pr
 Adaptation of Code implementation for : [Graph Neural Network-Based Anomaly Detection in Multivariate Time Series(AAAI'21)](https://arxiv.org/pdf/2106.06947.pdf)
 To execute a previously trained model with input: IoT data and output: a file with attack detections.
 
+# Collab Notebook for testing without iExec
+[Collab link](https://github.com/ONTOCHAIN/ADOS/blob/main/GDN-mainV0-Compute/PruebaEjecucion.ipynb)
+
 # Installation
 ### Requirements
 * Python >= 3.6
