@@ -1,8 +1,8 @@
-# GDN
-Adaptation of
-Code implementation for : [Graph Neural Network-Based Anomaly Detection in Multivariate Time Series(AAAI'21)](https://arxiv.org/pdf/2106.06947.pdf)
+# iexec Oracle with GDN
+iExec decentralized oracle for anamaly detection in IoT data from devices and providing attacks detection. This data can be then inserted to OntoChain.
 
-To execute a previously trained model with IoT data and obtain a file with attack detections.
+Adaptation of Code implementation for : [Graph Neural Network-Based Anomaly Detection in Multivariate Time Series(AAAI'21)](https://arxiv.org/pdf/2106.06947.pdf)
+To execute a previously trained model with input: IoT data and output: a file with attack detections.
 
 # Installation
 ### Requirements
