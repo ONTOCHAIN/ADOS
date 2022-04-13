@@ -11,12 +11,12 @@ We use part of msl dataset for the first use case (Water quality scenario)
 ## Data Preparation
 
 ### put your dataset under iexec_in/ directory with the same structure shown below
-
+```
 iexec_in
  |-list.txt      # the feature names, one feature per line
  |-data_in.csv   # dataset
  |-best_mls.pt   # trained model
- 
+``` 
 ## Notices:
 
 * The first column in .csv will be regarded as index column. 
