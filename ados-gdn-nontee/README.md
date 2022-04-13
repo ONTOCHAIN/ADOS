@@ -26,9 +26,10 @@ iexec_in
 # Build and run locally
 
 ## non tee
+```
 docker build . --tag ados-gdn-nontee:v1
 docker run --rm -v /home/ados/iexec_out:/iexec_out -e IEXEC_OUT=/iexec_out -v /home/ados/iexec_in:/iexec_in -e IEXEC_IN=/iexec_in ados-gdn-nontee:v1
-
+```
 
 
 # Others DataSet and Scenarios in preparation
