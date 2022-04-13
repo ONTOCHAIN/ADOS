@@ -1,0 +1,39 @@
+FROM ubuntu:18.04
+ENV PATH="/root/anaconda3/bin:${PATH}"
+ARG PATH="/root/anaconda3/bin:${PATH}"
+RUN apt-get update
+
+RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+RUN wget \
+    https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh \
+    && mkdir /root/.conda \
+    && bash Anaconda3-2021.11-Linux-x86_64.sh -b \
+    && rm -f Anaconda3-2021.11-Linux-x86_64.sh 
+
+RUN conda --version && \
+    conda create -n gdn python=3.9 -y
+
+SHELL ["conda", "run", "-n", "gdn", "/bin/bash", "-c"]
+
+RUN /bin/bash -c "source activate gdn"
+
+RUN conda install -n gdn pyg -c pyg -y && \
+    conda install -n gdn pytorch torchvision torchaudio -c pytorch -y
+
+RUN pip install matplotlib
+
+COPY GDN /root/GDN/
+
+WORKDIR /root/GDN/
+
+RUN bash install.sh
+
+COPY dataloader.py /root/anaconda3/envs/gdn/lib/python3.9/site-packages/torch_geometric/data/
+#COPY /root/GDN /app
+
+COPY ./GDN /app
+
+#RUN bash run.sh cpu msl
+
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "gdn", "python", "/app/main.py"]
