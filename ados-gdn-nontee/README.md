@@ -31,6 +31,30 @@ docker build . --tag ados-gdn-nontee:v1
 docker run --rm -v /home/ados/iexec_out:/iexec_out -e IEXEC_OUT=/iexec_out -v /home/ados/iexec_in:/iexec_in -e IEXEC_IN=/iexec_in ados-gdn-nontee:v1
 ```
 
+# Run on iExec
+
+## non tee
+Deploy your app on iExec
+```
+iexec app deploy --chain viviani
+```
+Verify the deployed app (name, multiaddr, checksum, owner)
+```
+iexec app show --chain viviani
+```
+Before requesting an execution make sure your account stake is charged with Viviani RLC
+```
+iexec account show --chain viviani
+```
+Run your application on iExec
+```
+iexec app run --watch --chain viviani
+```
+Once the run is completed copy the taskid from iexec app run output to download and check the result
+```
+iexec task show <taskid> --download my-app-result --chain viviani  \
+    && unzip my-app-result.zip -d my-app-result
+```
 
 # Others DataSet and Scenarios in preparation
 SWaT and WADI datasets can be requested from [iTrust](https://itrust.sutd.edu.sg/)
