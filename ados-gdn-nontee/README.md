@@ -2,7 +2,7 @@
 
 Code implementation for ADOS: AirTrace Decentralized Oracle System an advanced AI-based oracle system for securing off-chain IoT data integrity when injecting in the blockchain
 
-First Non TEE version.
+First Non TEE version with python and pip installer.
 
 # Usage
 We use part of msl dataset for the first use case (Water quality scenario) 
