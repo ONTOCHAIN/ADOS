@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # declare an image name
-IMG_NAME=ados
+IMG_NAME=ados-gdn-tee
 
 IMG_FROM=${IMG_NAME}:non-tee
 IMG_TO=${IMG_NAME}:tee
