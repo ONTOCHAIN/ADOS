@@ -108,7 +108,6 @@ def ados():
 
     thread.start()
 
-    #return json.dumps({'source': extension, 'task_id': 'unassigned', 'status': 'INITIATING'}), 201
     return jsonify({'source': extension, 'task_id': 'unassigned', 'status': 'INITIATING'}), 201
 
 @app.route("/transactions")
@@ -133,7 +132,6 @@ def adostransactions():
 
                 dictReturn.append({"transaction_id":file, "last_update":str(mtime), "task_id": task_id})
     
-    #return json.dumps(dictReturn), 200
     return jsonify(dictReturn), 200
 
 @app.route("/marketplace")
@@ -157,7 +155,6 @@ def adostransid(ados_transaction_id):
             task_id = completeString[completeString.find(char1) + 1: completeString.find(char2)]
         except:
             task_id='unassigned'
-        #TODO controlar cuando se está descomprimiendo el archivo
         if "Downloaded task result" in readFile:
             finalFile = '/app/computations/' + ados_transaction_id + '/result.json'
             notFound = True
@@ -167,7 +164,6 @@ def adostransid(ados_transaction_id):
                     with open(finalFile, 'r') as file2:
                         readFile2 = file2.read()
                         notFound = False
-                        #return json.dumps({'source': ados_transaction_id, 'task_id': task_id, 'status': 'DELIVERED', 'data': readFile2}), 200
                         return jsonify({'source': ados_transaction_id, 'task_id': task_id, 'status': 'DELIVERED', 'data': readFile2}), 200
                 else:
                     time.sleep(5)
