@@ -52,16 +52,17 @@ Please, note the following (these parameters have to be introduced by the user):
 * **Success Response:**
   
   A new transaction process is generated, returning a dictionary with:
-  a. **transaction_id**: unique alphanumeric value used to identify the transaction in ADOS
-  b **status**: current status of the ongoing transaction
+  - **transaction_id**: unique alphanumeric value used to identify the transaction in ADOS
+  - **status**: current status of the ongoing transaction
     1. INITIATING: transaction initiating
     2. UNSET: transaction initiated, tasks still not set up with the workerpool
     3. ACTIVE: tasks assigned to workerpool, now processing data in iExec model
     4. REVEALING: data processed, now finishing transaction
     5. COMPLETE: data processed, transaction over, waiting for receiving response
     6. DELIVERED: response received, now showing
-  c. **task_id**: associated task_id in iExec
+  - **task_id**: associated task_id in iExec
 
+  Now we show next the respone code and an example:
   * **Code:** 201 <br />
     **Content:** `{
     "source": "0DL2ucrkE2QeYJhi",
