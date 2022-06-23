@@ -41,11 +41,13 @@ Please, note the following (these parameters have to be introduced by the user):
    - **data_in**: URL pointing to a CSV-type file holding the IoT network data structured in timestamps to be processed by iExec
    - **list_in**: URL pointing to a txt file holding additional settings configuration for the process
 
+   ```
    {
        "weightsFile": "<URL>",
        "data_in": "<URL>",
        "list_in": "<URL>"
    }
+   ```
 
    NOTE: in each of the scenarios folders located in this repo you can find the metadata files you can use for testing the API.
 
