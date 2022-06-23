@@ -18,8 +18,8 @@ COPY . /app
 RUN mkdir /root/.ethereum/
 RUN mkdir /root/.ethereum/keystore
 RUN mkdir /app/iexec_conf
+RUN mkdir /app/logs
+RUN mkdir /app/computations
 
 # configure the container to run in an executed manner
-#ENTRYPOINT [ "python" ]
-
 CMD ["python", "-u", "ados.py" ]
