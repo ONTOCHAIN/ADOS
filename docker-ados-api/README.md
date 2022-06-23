@@ -52,15 +52,15 @@ Please, note the following (these parameters have to be introduced by the user):
 * **Success Response:**
   
   A new transaction process is generated, returning a dictionary with:
-  - **transaction_id**: unique alphanumeric value used to identify the transaction in ADOS
-  - **status**: current status of the ongoing transaction
+  a. **transaction_id**: unique alphanumeric value used to identify the transaction in ADOS
+  b **status**: current status of the ongoing transaction
     1. INITIATING: transaction initiating
     2. UNSET: transaction initiated, tasks still not set up with the workerpool
     3. ACTIVE: tasks assigned to workerpool, now processing data in iExec model
     4. REVEALING: data processed, now finishing transaction
     5. COMPLETE: data processed, transaction over, waiting for receiving response
     6. DELIVERED: response received, now showing
-  - **task_id**: associated task_id in iExec
+  c. **task_id**: associated task_id in iExec
 
   * **Code:** 201 <br />
     **Content:** `{
@@ -76,7 +76,8 @@ Please, note the following (these parameters have to be introduced by the user):
 
 * **Sample Call:**
 
-   ```curl --location --request POST 'ados.airtrace.io:5000' \
+   ```
+   curl --location --request POST 'ados.airtrace.io:5000' \
    --header 'Content-Type: application/json' \
    --data-raw '{
     "weightsFile": "https://airchain.s3.eu-west-1.amazonaws.com/ados/inferences/best_mls.pt",
