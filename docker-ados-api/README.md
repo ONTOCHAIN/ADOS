@@ -267,3 +267,10 @@ Please, note the following (these parameters have to be introduced by the user):
 * **Notes:**
 
   Please, refer to the scenarios folder to check examples on trained models by ADOS short project in ONTOCHAIN's OC2.
+
+**Example tutorial on how to run via POSTMAN**
+----
+
+  You can check following Youtube video in order to better understand the steps to reproduce the behavior this API expects:
+  
+  https://www.youtube.com/watch?v=p2t5NcY7ylY 
